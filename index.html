@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: url('https://web.archive.org/web/20100612111425im_/http://www.roblox.com/images/Skies/Sky-Blue.png');
+            background-color: #bcd1ed;
+            font-family: Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Top Header Banner */
+        .header-banner {
+            width: 900px;
+            height: 120px;
+            background: #fff url('https://web.archive.org/web/20090227063125im_/http://www.roblox.com/images/Ads/Roblox_Characters.png') no-repeat center;
+            border: 1px solid #777;
+            margin-top: 10px;
+        }
+
+        /* Blue Nav Bar */
+        .nav-bar {
+            width: 900px;
+            background-color: #6e8cb4;
+            color: white;
+            padding: 8px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid #444;
+        }
+
+        .nav-bar span { margin: 0 10px; cursor: pointer; }
+        .nav-bar span:hover { text-decoration: underline; }
+
+        /* Main Content Container */
+        .main-container {
+            width: 880px;
+            background: white;
+            display: flex;
+            padding: 10px;
+            border: 1px solid #777;
+            min-height: 600px;
+        }
+
+        /* Left Sidebar */
+        .sidebar { width: 150px; font-size: 12px; }
+        .sidebar h2 { font-size: 18px; margin-bottom: 5px; }
+        .sidebar div { color: #0000ee; margin-bottom: 4px; cursor: pointer; }
+
+        /* Games Grid */
+        .games-area { flex-grow: 1; padding-left: 20px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .game-card { border: 1px solid #ccc; padding: 5px; text-align: center; }
+        .game-card img { width: 100%; height: 100px; background: #eee; border: 1px solid #999; }
+        .game-card span { font-size: 11px; color: #0000ee; font-weight: bold; display: block; margin-top: 5px; }
+
+        /* Are you a Noob Box */
+        .noob-box {
+            border: 1px solid #777;
+            width: 200px;
+            margin-left: 15px;
+            text-align: center;
+        }
+        .noob-header { background: #c8e6c9; color: #5d4037; font-weight: bold; padding: 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="header-banner"></div>
+    
+    <div class="nav-bar">
+        <span>My ROBLOX</span> | <span>Games</span> | <span>Catalog</span> | <span>People</span> | <span>Forum</span> | <span>Help</span>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <h2>Games</h2>
+            <b>Browse</b>
+            <div>Most Popular</div>
+            <div>Top Favorites</div>
+            <div>Recently Updated</div>
+            <br>
+            <b>Time</b>
+            <div>Now</div>
+            <div>Past Day</div>
+            <div>All-time</div>
+        </div>
+
+        <div class="games-area">
+            <h3>Most Popular (Now)</h3>
+            <div class="grid">
+                <div class="game-card">
+                    <img src="">
+                    <span>The Longest EASY Obby</span>
+                </div>
+                <div class="game-card">
+                    <img src="">
+                    <span>Horror Minigames!</span>
+                </div>
+                <div class="game-card">
+                    <img src="">
+                    <span>Base Wars FPS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="noob-box">
+            <div class="noob-header">ARE YOU A NOOB?</div>
+            <img src="https://tr.rbxcdn.com/30day-avatar-noob-custom" style="width:100px;">
+        </div>
+    </div>
+
+</body>
+</html>
