@@ -1,123 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style>
-        body {
-            background: url('https://web.archive.org/web/20100612111425im_/http://www.roblox.com/images/Skies/Sky-Blue.png');
-            background-color: #bcd1ed;
-            font-family: Verdana, sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Top Header Banner */
-        .header-banner {
-            width: 900px;
-            height: 120px;
-            background: #fff url('https://web.archive.org/web/20090227063125im_/http://www.roblox.com/images/Ads/Roblox_Characters.png') no-repeat center;
-            border: 1px solid #777;
-            margin-top: 10px;
-        }
-
-        /* Blue Nav Bar */
-        .nav-bar {
-            width: 900px;
-            background-color: #6e8cb4;
-            color: white;
-            padding: 8px 0;
-            text-align: center;
-            font-weight: bold;
-            font-size: 14px;
-            border: 1px solid #444;
-        }
-
-        .nav-bar span { margin: 0 10px; cursor: pointer; }
-        .nav-bar span:hover { text-decoration: underline; }
-
-        /* Main Content Container */
-        .main-container {
-            width: 880px;
-            background: white;
-            display: flex;
-            padding: 10px;
-            border: 1px solid #777;
-            min-height: 600px;
-        }
-
-        /* Left Sidebar */
-        .sidebar { width: 150px; font-size: 12px; }
-        .sidebar h2 { font-size: 18px; margin-bottom: 5px; }
-        .sidebar div { color: #0000ee; margin-bottom: 4px; cursor: pointer; }
-
-        /* Games Grid */
-        .games-area { flex-grow: 1; padding-left: 20px; }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-
-        .game-card { border: 1px solid #ccc; padding: 5px; text-align: center; }
-        .game-card img { width: 100%; height: 100px; background: #eee; border: 1px solid #999; }
-        .game-card span { font-size: 11px; color: #0000ee; font-weight: bold; display: block; margin-top: 5px; }
-
-        /* Are you a Noob Box */
-        .noob-box {
-            border: 1px solid #777;
-            width: 200px;
-            margin-left: 15px;
-            text-align: center;
-        }
-        .noob-header { background: #c8e6c9; color: #5d4037; font-weight: bold; padding: 5px; }
-    </style>
+    <meta charset="UTF-8">
+    <title>ROBLOX.com - Games</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="header-banner"></div>
-    
-    <div class="nav-bar">
-        <span>My ROBLOX</span> | <span>Games</span> | <span>Catalog</span> | <span>People</span> | <span>Forum</span> | <span>Help</span>
-    </div>
-
-    <div class="main-container">
-        <div class="sidebar">
-            <h2>Games</h2>
-            <b>Browse</b>
-            <div>Most Popular</div>
-            <div>Top Favorites</div>
-            <div>Recently Updated</div>
-            <br>
-            <b>Time</b>
-            <div>Now</div>
-            <div>Past Day</div>
-            <div>All-time</div>
-        </div>
-
-        <div class="games-area">
-            <h3>Most Popular (Now)</h3>
-            <div class="grid">
-                <div class="game-card">
-                    <img src="">
-                    <span>The Longest EASY Obby</span>
-                </div>
-                <div class="game-card">
-                    <img src="">
-                    <span>Horror Minigames!</span>
-                </div>
-                <div class="game-card">
-                    <img src="">
-                    <span>Base Wars FPS</span>
+    <div id="MasterContainer">
+        <div id="Header">
+            <div class="header-inner">
+                <img src="https://web.archive.org/web/20110222201314im_/http://www.roblox.com/images/Logo/logo.png" class="roblox-logo">
+                <div class="banner-right">
+                    <button class="btn-play-now">PLAY NOW</button>
                 </div>
             </div>
         </div>
 
-        <div class="noob-box">
-            <div class="noob-header">ARE YOU A NOOB?</div>
-            <img src="https://tr.rbxcdn.com/30day-avatar-noob-custom" style="width:100px;">
+        <div id="NavigationBar">
+            <div class="nav-links">
+                <span>My ROBLOX</span>
+                <span class="active">Games</span>
+                <span>Catalog</span>
+                <span>People</span>
+                <span>Builders Club</span>
+                <span>Forum</span>
+                <span>News <img src="https://web.archive.org/web/2011/http://www.roblox.com/images/feed-icon-14x14.png"></span>
+            </div>
+        </div>
+
+        <div id="MainContent">
+            <div id="LeftCol">
+                <div class="box">
+                    <div class="box-header">Member Login</div>
+                    <div class="box-content login-inner">
+                        <label>Username:</label>
+                        <input type="text" value="GroovyDominoes52">
+                        <label>Password:</label>
+                        <input type="password" value="******">
+                        <button class="btn-small">Login</button>
+                        <button class="btn-small gray">Register</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="CenterCol">
+                <div class="box">
+                    <div class="box-header-stripe">Featured Free Game: Jet Wars: Advanced Battle</div>
+                    <div class="box-content">
+                        <img src="https://blog.roblox.com/wp-content/uploads/2011/04/Jet-Wars.jpg" class="featured-img">
+                        <div class="game-footer">
+                            <button class="btn-play-this">Play This</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="RightCol">
+                <div class="box">
+                    <div class="box-header-stripe">Parents' Corner</div>
+                    <div class="box-content small-text">
+                        ROBLOX is a kid-friendly place on the internet...
+                        <div class="trust-e"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
 </body>
 </html>
