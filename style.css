@@ -1,73 +1,81 @@
-/* The Sky Background from your Image */
+/* 2011 Blue Sky Background */
 body {
-    background: #bcd1ed url('https://web.archive.org/web/20100612111425im_/http://www.roblox.com/images/Skies/Sky-Blue.png') no-repeat center top fixed;
-    background-size: cover;
-    font-family: Verdana, sans-serif;
+    background: #bcd1ed; /* Fallback color */
+    background-image: linear-gradient(to bottom, #7da7d9, #bcd1ed);
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    padding: 0;
 }
 
 #MasterContainer {
     width: 900px;
     margin: 0 auto;
     background: white;
-    border: 1px solid #777;
+    border-left: 1px solid #777;
+    border-right: 1px solid #777;
     min-height: 100vh;
 }
 
-/* 2011 Glossy Header */
+/* Header Sections */
+#Header { padding: 15px 10px; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+
+/* Placeholder Pink Blocks */
+.placeholder-logo { width: 180px; height: 50px; background: #ff00ff; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border: 2px solid black; }
+.placeholder-play-now { width: 120px; height: 40px; background: #ff00ff; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 5px; }
+.placeholder-banner { width: 100%; height: 60px; background: #ff00ff; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; color: white; font-size: 10px; }
+.placeholder-featured-img { width: 100%; height: 250px; background: #ff00ff; display: flex; align-items: center; justify-content: center; color: white; }
+.placeholder-trust-e { width: 60px; height: 25px; background: #ff00ff; margin-top: 5px; }
+.placeholder-stat-img { width: 32px; height: 32px; background: #ff00ff; }
+
+/* 2011 Navigation (Glossy) */
 #NavigationBar {
     background: linear-gradient(to bottom, #4a6da7 0%, #2a4d87 100%);
-    border-top: 1px solid #777;
-    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 2px solid #1a3d77;
 }
-
-.nav-links span {
-    display: inline-block;
+.nav-links { display: flex; }
+.nav-item {
     color: white;
     padding: 8px 12px;
-    font-weight: bold;
     font-size: 12px;
+    font-weight: bold;
     border-right: 1px solid #1a3d77;
     cursor: pointer;
 }
+.nav-item.active { background: #1a3d77; }
 
-.nav-links span.active {
-    background-color: #1a3d77;
+/* Alert Bar */
+.alert-bar {
+    background: #ffae00;
+    border-bottom: 1px solid #cc8e00;
+    color: white;
+    padding: 4px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-/* Diagonal Stripe Header for boxes (Parents/Featured) */
-.box-header-stripe {
+/* Striped Headers */
+.box-header-striped {
     background: #f0f0f0 repeating-linear-gradient(45deg, #f0f0f0, #f0f0f0 10px, #ffffff 10px, #ffffff 20px);
     border: 1px solid #ccc;
     font-weight: bold;
     padding: 5px;
     font-size: 13px;
 }
+.box-header-plain { background: #eee; border: 1px solid #ccc; font-weight: bold; padding: 5px; }
 
-.box-header {
-    background-color: #eee;
-    font-weight: bold;
-    padding: 5px;
-    border-bottom: 1px solid #ccc;
-}
-
-/* The Iconic 2011 Green Button */
-.btn-play-this {
-    background: linear-gradient(to bottom, #34bf49 0%, #248f39 100%);
-    color: white;
-    border: 1px solid #146f29;
-    padding: 5px 15px;
-    border-radius: 3px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-}
-
-#MainContent {
-    display: flex;
-    padding: 10px;
-}
-
+/* Column Logic */
+#MainContent { display: flex; padding: 10px; }
 #LeftCol { width: 180px; }
 #CenterCol { flex-grow: 1; padding: 0 10px; }
 #RightCol { width: 220px; }
+
+.standard-box { border: 1px solid #ccc; margin-bottom: 10px; }
+.box-content { padding: 10px; font-size: 12px; }
+.no-padding { padding: 0; }
+
+/* Buttons */
+.btn-blue { background: linear-gradient(to bottom, #4a6da7, #2a4d87); color: white; border: 1px solid #1a3d77; padding: 4px 10px; font-weight: bold; cursor: pointer; }
+.btn-play-this { background: linear-gradient(to bottom, #34bf49 0%, #248f39 100%); color: white; border: 1px solid #146f29; padding: 5px 20px; font-weight: bold; border-radius: 3px; margin: 10px; }
